@@ -1,32 +1,38 @@
-# tensorflow
-Neural network training for handwritten numeral digit recognition
+# TensorFlow: Handwritten Digit Recognition
+
+Neural network training for handwritten digit classification (0–9).
 
 ---
 
-## Στόχος της Εργασίας
+## 🎯 Project Objective
 
-Στόχος της εργασίας είναι η εκπαίδευση Βαθιών Νευρωνικών Δικτύων (Deep Neural Networks) για την ταξινόμηση (Classification) χειρόγραφων ψηφίων (0-9).
-
-## Υλοποίηση
-
-- Τα δεδομένα του MINST φορτώθηκαν με τη χρήση του TensorFlow.
-- Οι εικόνες των 28x28 pixels μετατράπηκαν σε διανύσματα μεγέθους 784 ενώ οι ετικέτες κωδικοποιήθηκαν με one-hot encoding.
-- Το αρχικό δίκτυο αποτελείται από ένα επίπεδο εισόδου με 784 νευρώνες, δύο κρυφά επίπεδα με 256 νευρώνες το καθένα και συνάρτηση ενεργοποίησης tanh, και ένα επίπεδο εξόδου με 10 νευρώνες και softmax ενεργοποίηση.
-- Χρησιμοποιήθηκε η βελτιστοποίηση Stochastic Gradient Descent (SGD) με ρυθμό μάθησης 0.001.
-- Εκπαιδεύτηκε για 10 εποχές.
-- Δοκιμάστηκε η βελτιστοποίηση της απόδοσης μέσω παραμετροποίησης
-	- στα επίπεδα,
-	- τον αριθμό των νευρώνων,
-	- τις εποχές,
-	- το ρυθμό μάθησης και
-	- τη συνάρτηση ενεργοποίησης.
-- Εφαρμόστηκε dropout 0.3 στα κρυφά επίπεδα, χωρίς όμως αυτό να επιφέρει βελτίωση στην ακρίβεια.
-- Για κάθε μοντέλο υπολογίστηκε η ακρίβεια και το σφάλμα κατά την εκπαίδευση και την επικύρωση.
-
-## Αποτελέσματα
-
-Η ακρίβεια του τελικού μοντέλου πέτυχε ακρίβεια πάνω από 95% στα δεδομένα δοκιμής, συνεπώς το Νευρωνικό Δίκτυο είναι απολύτως ικανό να χρησιμοποιηθεί στην αναγνώριση χειρόγραφων ψηφίων.
+The aim of this project is to train **Deep Neural Networks (DNNs)** for the classification of handwritten digits (0–9).  
 
 ---
 
-*Λευκόπουλος Γεώργιος (4588) | Τμήμα Πληροφορικής | Σ.Θ.Ε. | Α.Π.Θ.*
+## ⚙️ Implementation
+
+- The **MNIST dataset** was loaded using TensorFlow.  
+- Images of size **28x28 pixels** were flattened into vectors of length 784, while labels were encoded using **one-hot encoding**.  
+- The initial network architecture included:  
+  - An input layer with **784 neurons**  
+  - Two hidden layers with **256 neurons each**, using the **tanh** activation function  
+  - An output layer with **10 neurons**, using **softmax** activation  
+- Training used **Stochastic Gradient Descent (SGD)** with a learning rate of `0.001`.  
+- The model was trained for **10 epochs**.  
+- Performance optimization was explored by varying:  
+  - Number of layers  
+  - Number of neurons per layer  
+  - Number of epochs  
+  - Learning rate  
+  - Activation function  
+- A dropout rate of **0.3** was applied to the hidden layers, although this did not lead to accuracy improvements.  
+- For each model, both **accuracy** and **loss** were recorded during training and validation.  
+
+---
+
+## 📊 Results
+
+The final model achieved an accuracy of **over 95% on the test dataset**, indicating that the neural network is highly effective for handwritten digit recognition.  
+
+---
